@@ -1,0 +1,20 @@
+<ion-slides pager>
+  <ion-slide *ngFor="let slide of slides">
+    <ion-toolbar text-right>
+        <button ion-button round outline small color="primary" (click)="gotoRegister()">ข้าม</button>
+    </ion-toolbar>
+    <img [src]="slide.image" class="slide-image"/>
+    <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+    <p [innerHTML]="slide.description"></p>
+  </ion-slide>
+  <ion-slide>
+    <ion-toolbar>
+    </ion-toolbar>
+    <img src="assets/imgs/intro1.jpg" class="slide-image"/>
+    <h2 class="slide-title">เริ่มใช้งานกันเลย ?</h2>
+    <button ion-button round large icon-end color="primary" (click)="gotoRegister()">
+      ลองใช้งาน
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </ion-slide>
+</ion-slides>
